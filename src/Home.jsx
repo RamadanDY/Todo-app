@@ -1,4 +1,6 @@
 import React from 'react'
+import './App.css'
+import Create from './Create'
 
 const Home = () => {
   return (
@@ -6,13 +8,8 @@ const Home = () => {
         <div className="wrapper">
             <div className="content-wrapper">
                 <div className="header">My Todo App</div>
-                <form>
-                <label className="i1">
-                <input className="gap" name="name" type="text" />
-                <button type="submit">Add</button>
-                </label>
-            </form>
-          </div>
+                <Create />
+            </div>
         </div>
     </div>
   )
