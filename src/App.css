@@ -12,19 +12,21 @@
   background-color: #fffaf0;
   height: 50%;
   width: 50%;
+  border-radius: 15px;
   /* justify-content: space-evenly; */
 }
 .header {
   color: red;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem;
+  padding: 2rem;
+  maigin: 0;
 }
 
 form {
   color: blue;
-  border-radius: 2px;
   display: flex;
   gap: 35px;
   flex-direction: column;
