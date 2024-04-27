@@ -24,7 +24,6 @@ const Create = () => {
                  the e.target.value targets the new value that is stored inside the settarget useState*/}
                <input className="gap" name="name" type="text" onChange={(e) => setTask(e.target.value)} />
                <button type="button" onClick={handleAdd}>Add</button> {/* Change type to "button" */}
-               <button type="button" onClick={handleAdd}>Add</button> {/* Change type to "button" */}
 
             </label>
         </form>
