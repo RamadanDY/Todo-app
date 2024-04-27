@@ -4,7 +4,7 @@ import Create from './Create'
 import { useState } from 'react'
 
 const Home = () => {
-    // 1.newstate created
+    // to store and display out text using the map method
     const [todos, setTodos] = useState([]);
   return (
     <div>
@@ -14,11 +14,30 @@ const Home = () => {
                 <Create />
                 {/*  */}
 
+                {/* if (todos.length === 0 ){
+                    <div>
+                        <h2>no record</h2>
+                    </div>
+
+                }else {
+                    todos.map((todo) =>{
+                        <div>
+                            {todo}
+                        </div>
+
+                    })
+                } */}
+
                 {
+
+
                     todos.length === 0 ? 
-                    <div><h2>no record</h2></div>
+                    <div><h2>no records</h2></div>
                     :
-                
+                    // The map method is a way to loop over each item in an array and perform some
+                    //  operation on each item.
+                    // right now because of the {todo} ,its empty 
+                    // so above us is a condition
                     todos.map(todo => {
                         <div>
                             {todo}
