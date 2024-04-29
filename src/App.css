@@ -25,11 +25,16 @@
   maigin: 0;
 }
 .text-2xl {
+  display: space-between;
   /* color: green; */
   border: 2px solid red;
   border-radius: 5px;
   padding: 2px;
   margin: 4px;
+}
+.icon {
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 form {

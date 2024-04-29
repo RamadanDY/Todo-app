@@ -5,6 +5,8 @@ import axios from 'axios'
 import { useState ,useEffect } from 'react'
 // import { MdDelete } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { BsCircle } from "react-icons/bs";
+
 
 
 const Home = () => {
@@ -43,9 +45,11 @@ const Home = () => {
                     // The primary purpose of key is to provide a unique identifier for each element.
                     todos.map(todo => {
                         return (
-                            <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-center" >
+                            <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-between" >
+                                <BsCircle className='icon' />
+
                                 {todo.task}
-                                <MdDelete />
+                                <MdDelete className='icon'/>
 
                                 {/* <TbHttpDelete /> */}
 
