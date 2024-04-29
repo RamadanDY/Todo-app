@@ -3,6 +3,9 @@ import './App.css'
 import Create from './Create'
 import axios from 'axios'
 import { useState ,useEffect } from 'react'
+// import { MdDelete } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+
 
 const Home = () => {
     // to store and display out text using the map method
@@ -42,6 +45,10 @@ const Home = () => {
                         return (
                             <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-center" >
                                 {todo.task}
+                                <MdDelete />
+
+                                {/* <TbHttpDelete /> */}
+
                             </div>
                         );
                     })
