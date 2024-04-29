@@ -24,11 +24,13 @@
   padding: 2rem;
   maigin: 0;
 }
-/* .text-2xl {
-  display: center;
-  text-align: center;
+.text-2xl {
   color: green;
-} */
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 4px;
+}
 
 form {
   color: blue;
