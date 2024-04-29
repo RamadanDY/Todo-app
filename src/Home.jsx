@@ -37,9 +37,10 @@ const Home = () => {
                     //  operation on each item.
                     // right now because of the {todo} ,its empty 
                     // so above us is a condition
+                    // The primary purpose of key is to provide a unique identifier for each element.
                     todos.map(todo => {
                         return (
-                            <div key={todo.id}>
+                            <div key={todo.id} className="text-3xl font-bold underline" >
                                 {todo.task}
                             </div>
                         );
