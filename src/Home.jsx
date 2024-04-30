@@ -23,7 +23,8 @@ const Home = () => {
         .catch(err => console.log(err))
 
     },[])
-
+    // add another field file inside your todo.js inside server to specify what type we want the checkbox to do ie 
+    // should be a boolean 
     const handleEdit = () => {
 
     }
