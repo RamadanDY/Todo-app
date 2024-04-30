@@ -25,7 +25,10 @@ const Home = () => {
     },[])
     // add another field file inside your todo.js inside server to specify what type we want the checkbox to do ie 
     // should be a boolean 
-    const handleEdit = () => {
+    const handleEdit = (id) => {
+        axios.get('http://localhost:8080/update/'+id)
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
 
     }
 
@@ -50,7 +53,7 @@ const Home = () => {
                     // The primary purpose of key is to provide a unique identifier for each element.
                     todos.map(todo => {
                         return (
-                            <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-between " onClick={handleEdit} >
+                            <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-between " onClick={()=> handleEdit(todo._id)} >
                                 <BsCircle className='icon' />
 
                                 {todo.task}
