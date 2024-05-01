@@ -5,7 +5,9 @@ import axios from 'axios'
 import { useState ,useEffect } from 'react'
 // import { MdDelete } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-import { BsCircle } from "react-icons/bs";
+import { BsCircle,  } from "react-icons/bs";
+import { BsCircleFill } from "react-icons/bs";
+
 
 
 
@@ -25,8 +27,12 @@ const Home = () => {
     },[])
     // add another field file inside your todo.js inside server to specify what type we want the checkbox to do ie 
     // should be a boolean 
+    // in the next step we want to paers theid inside this handleEffect function
+    // after that we create a handleEffect for it t get the id of each data and used that as a key to 
+    // either delete the data from both the dom and also the database 
+    // go to the serverside and create this API ie for the /get
     const handleEdit = (id) => {
-        axios.get('http://localhost:8080/update/'+id)
+        axios.put('http://localhost:8080/update/'+id)
         .then(result => console.log(result))
         .catch(err => console.log(err))
 
@@ -54,7 +60,14 @@ const Home = () => {
                     todos.map(todo => {
                         return (
                             <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-between " onClick={()=> handleEdit(todo._id)} >
+                                {todo.done ? 
+                                <BsCircleFill></BsCircleFill> 
+                                :     
                                 <BsCircle className='icon' />
+                                }
+
+                                
+                                {/* <BsCircle className='icon' /> */}
 
                                 {todo.task}
                                 <MdDelete className='icon'/>
