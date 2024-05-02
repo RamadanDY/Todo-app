@@ -24,6 +24,10 @@
   padding: 2rem;
   maigin: 0;
 }
+.line_through {
+  text-decoration: line-through;
+  /* color: white; */
+}
 .text-2xl {
   display: space-between;
   /* color: green; */

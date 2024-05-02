@@ -25,6 +25,10 @@ const Home = () => {
         .catch(err => console.log(err))
 
     },[])
+    const reloadApp = () => {
+        // Reload the app
+        window.location.reload();
+    };
     // add another field file inside your todo.js inside server to specify what type we want the checkbox to do ie 
     // should be a boolean 
     // in the next step we want to paers theid inside this handleEffect function
@@ -33,7 +37,7 @@ const Home = () => {
     // go to the serverside and create this API ie for the /get
     const handleEdit = (id) => {
         axios.put('http://localhost:8080/update/'+id)
-        .then(result => console.log(result))
+        .then(result => {reloadApp()})
         .catch(err => console.log(err))
 
     }

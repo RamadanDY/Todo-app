@@ -6,12 +6,18 @@ const Create = () => {
   //  this stores the input that we do
   const [task, setTask] = useState('');
 
+  const reloadApp = () => {
+    // Reload the app
+    window.location.reload();
+  };
+
   // Function to handle adding task
   const handleAdd = (event) => {
     event.preventDefault(); // Prevent form submission
     // posting the data and calling the server side 
     axios.post('http://localhost:8080/add', {task : task})
-    .then(result => console.log(result))
+    .then(result => console.log(result)) 
+    reloadApp()
     .catch(err => console.log(err))
     
   }
