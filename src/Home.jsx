@@ -61,15 +61,13 @@ const Home = () => {
                         return (
                             <div key={todo.id} className="text-2xl font-bold text-red flex items-center justify-between " onClick={()=> handleEdit(todo._id)} >
                                 {todo.done ? 
-                                <BsCircleFill></BsCircleFill> 
+                                // search for this icon rather <bsFillCheckCircleFill></bsFillCheckCircleFill>
+                                <BsCircleFill className='icon'></BsCircleFill> 
                                 :     
                                 <BsCircle className='icon' />
                                 }
-
-                                
-                                {/* <BsCircle className='icon' /> */}
-
-                                {todo.task}
+                                {/* if todo.done is true then add a css effect called line_through with a css property */}
+                                <p className={todo.done ? 'line_through' : ''}>{todo.task}</p>
                                 <MdDelete className='icon'/>
 
                                 {/* <TbHttpDelete /> */}
