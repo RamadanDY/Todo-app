@@ -41,6 +41,13 @@ const Home = () => {
         .catch(err => console.log(err))
 
     }
+    const handleDelete = (id) => {
+        axios.delete('http://localhost:8080/delete/'+id)
+        .then(result => {reloadApp()})
+        .catch(err => console.log(err))
+
+
+    }
 
   return (
     <div>
@@ -72,7 +79,7 @@ const Home = () => {
                                 }
                                 {/* if todo.done is true then add a css effect called line_through with a css property */}
                                 <p className={todo.done ? 'line_through' : ''}>{todo.task}</p>
-                                <MdDelete className='icon'/>
+                                <MdDelete className='icon' onClick={() => handleDelete(todo._id)}/>
 
                                 {/* <TbHttpDelete /> */}
 
